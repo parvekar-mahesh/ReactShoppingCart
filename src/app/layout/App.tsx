@@ -5,8 +5,6 @@ import Catalog from "../../features/catalog/Catalog";
 import { Container, CssBaseline, ThemeProvider, Typography, createTheme } from "@mui/material";
 import Header from "./Header";
 
-
-
 function App() {
   
   const [darkMode, setDarkMode] = useState(false);

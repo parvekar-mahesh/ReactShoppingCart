@@ -8,7 +8,7 @@ function Header(Props:Props) {
   return (
       <AppBar position='static' sx={{mb:4}}>
           <Toolbar>
-              <Typography> Re-store</Typography>
+              <Typography> React-store</Typography>
       </Toolbar>
       <Switch  checked={Props.darkMode} onChange={Props.handleThemeChange}></Switch>
  </AppBar>
