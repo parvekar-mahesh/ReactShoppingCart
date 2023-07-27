@@ -4,6 +4,7 @@ import Product from "../models/Product"
 import Catalog from "../../features/catalog/Catalog";
 import { Container, CssBaseline, ThemeProvider, Typography, createTheme } from "@mui/material";
 import Header from "./Header";
+import { Outlet } from "react-router-dom";
 
 function App() {
   
@@ -28,8 +29,8 @@ function App() {
       {/* <Typography variant="h5">React Store</Typography> */}
       <Header darkMode={darkMode} handleThemeChange={handleThemeChange}></Header>
       <Container>
-
-      <Catalog></Catalog>
+      <Outlet></Outlet>
+      {/* <Catalog></Catalog> */}
       </Container>
     </ThemeProvider>
   );
