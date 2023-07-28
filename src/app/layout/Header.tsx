@@ -21,7 +21,7 @@ function Header(Props: Props) {
   
   return (
       <AppBar position='static' sx={{mb:4}}>
-          <Toolbar>
+          <Toolbar sx={{ display:'flex', justifyContent :'space-between', alignItems:'center'}}>
         <Typography component={NavLink} to="/"
         sx= {{color:'inherit', textDecoration:'none' }}
         > React-store</Typography>
@@ -29,7 +29,17 @@ function Header(Props: Props) {
         
         <List sx={{display:'flex'}}>
           {midLinks.map(({ title, path })=> (
-            <ListItem component={NavLink}  to={path} key={path} sx={{color:'inherit',typography:'h15'}}>
+            <ListItem component={NavLink} to={path} key={path} sx={{
+              color: 'inherit', typography: 'h15',
+              '&:hover': {
+                color: 'secondary.main'
+              },
+                '&:active': {
+                color: 'text.secondary'
+              }
+            
+            
+            }}>
               {title.toUpperCase()}
           </ListItem>
 ))}
@@ -42,7 +52,15 @@ function Header(Props: Props) {
 
                 <List sx={{display:'flex'}}>
           {rightLinks.map(({ title, path })=> (
-            <ListItem component={NavLink}  to={path} key={path} sx={{color:'inherit',typography:'h15'}}>
+            <ListItem component={NavLink} to={path} key={path} sx={{
+              color: 'inherit', typography: 'h15',
+              '&:hover': {
+                color: 'secondary.main'
+              },
+                   '&:active': {
+                color: 'text.secondary'
+              }
+            }}>
               {title.toUpperCase()}
           </ListItem>
 ))}
