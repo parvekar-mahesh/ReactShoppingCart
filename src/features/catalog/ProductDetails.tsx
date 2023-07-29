@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Product from '../../app/models/Product';
+import NotFound from '../../app/errors/NotFound';
 
 function ProductDetails() {
   const { id } = useParams<{ id: string }>();
@@ -16,7 +17,8 @@ function ProductDetails() {
   }, [id])
   
   if (loading) return <h3>Loading....</h3>
-   if (!product) return <h3>product not found....</h3>
+  if (!product) return <NotFound></NotFound>
+  
   return (
     <Grid container spacing={6}>
       <Grid item xs={6}>

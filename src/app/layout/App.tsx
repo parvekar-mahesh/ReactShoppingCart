@@ -5,6 +5,8 @@ import Catalog from "../../features/catalog/Catalog";
 import { Container, CssBaseline, ThemeProvider, Typography, createTheme } from "@mui/material";
 import Header from "./Header";
 import { Outlet } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
   
@@ -25,6 +27,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <ToastContainer position="bottom-right" hideProgressBar  theme="colored" ></ToastContainer>
       <CssBaseline></CssBaseline>
       {/* <Typography variant="h5">React Store</Typography> */}
       <Header darkMode={darkMode} handleThemeChange={handleThemeChange}></Header>
