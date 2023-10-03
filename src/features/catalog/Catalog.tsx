@@ -19,13 +19,10 @@ function Catalog() {
 
   useEffect(()=>
   {
-    fetch('https://localhost:7001/api/product')
+    fetch('http://localhost:5000/api/Products')
     .then(response=> response.json())
     .then(data=> setProducts(data))
   }, [])
-
-
-  
     return (
       <>
             <ProductList products={products}></ProductList>          
